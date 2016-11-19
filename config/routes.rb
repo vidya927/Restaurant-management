@@ -8,7 +8,17 @@ Rails.application.routes.draw do
   get '/chefhome' ,to: 'chef#home'
 
   get '/chefview' , to: 'chef#view'
+  
 
+ get '/chefedit' , to: 'chef#edit'
+
+  get '/chefadd' , to: 'chef#add'
+  
+  post '/chefedit' , to: 'chef#edit'
+
+  post '/chefadd' , to: 'chef#create'
+  
+  
   get '/chefprepare' , to: 'chef#prepare'
 
    get '/restauranthome' , to: 'restaurant#home'
