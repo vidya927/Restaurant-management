@@ -36,6 +36,7 @@ Rails.application.routes.draw do
   get '/managerview' , to: 'manager#view'
   
   get '/managerupdate' , to: 'manager#update'
+  get '/managerupdate' , to: 'manager#view'
   
   post '/managerupdate' , to: 'manager#create'
   

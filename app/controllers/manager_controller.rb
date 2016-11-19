@@ -4,7 +4,7 @@ class ManagerController < ApplicationController
   end
 
   def view
-   
+   @inventory = Inventory.all
   end
 
   def update
