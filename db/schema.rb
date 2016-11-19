@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161118224840) do
+ActiveRecord::Schema.define(version: 20161119044946) do
 
   create_table "inventories", force: :cascade do |t|
     t.string   "item_name"

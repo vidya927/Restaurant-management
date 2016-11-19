@@ -4,14 +4,18 @@ class ManagerController < ApplicationController
   end
 
   def view
-    @inventory = Inventory.all
+   
   end
 
+  def update
+    @inventory = Inventory.new
+  end
+  
   def create
-    @inventory = Inventory.new(inventory_params)
+     @inventory = Inventory.new(inventory_params)
     if @inventory.save
       flash[:success] = "saved successfully"
-      redirect_to '/managerview'
+      redirect_to '/managerupdate'
     else
       render '/restaurantmenu'
     end
@@ -22,9 +26,4 @@ class ManagerController < ApplicationController
      params.require(:inventory).permit(:item_name, :quantity_available)
    end
   
-  def update
-    @inventory = Inventory.new
-  end
-  
-
 end
