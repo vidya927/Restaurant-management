@@ -1,2 +1,20 @@
-<h1>Manager#update</h1>
-<p>Find me in app/views/manager/update.html.erb</p>
+<h1>Menu</h1>
+<%= link_to "home", managerhome_path, class: "btn btn-lg btn-primary" %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+     <%= form_for(@inventory, url: managerupdate_path) do |f| %>
+    
+     
+
+      <%= f.label :name_of_item %>
+      <%= f.text_field :item_name, class: 'form-control' %>
+
+      <%= f.label :Quantity %>
+      <%= f.text_field :quantity_available, class: 'form-control' %>
+
+ 
+      <%= f.submit "update", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

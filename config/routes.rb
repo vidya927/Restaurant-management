@@ -1,36 +1,36 @@
 Rails.application.routes.draw do
-  get 'customer/home'
+  get '/customerhome', to: 'customer#home'
 
-  get 'customer/order'
+  get '/customerorder', to: 'customer#order'
 
-  get 'customer/view'
+  get '/customerview', to: 'customer#view'
 
-  get 'manager/home'
+  get '/chefhome' ,to: 'chef#home'
 
-  get '/managerview' , to: 'manager#view'
+  get '/chefview' , to: 'chef#view'
 
-  get 'manager/update'
-
-  get 'chef/home'
-
-  get 'chef/view'
-
-  get 'chef/prepare'
+  get '/chefprepare' , to: 'chef#prepare'
 
    get '/restauranthome' , to: 'restaurant#home'
 
-  get 'restaurant/chef'
+  get '/restaurantchef' ,to: 'restaurant#chef'
 
-  get 'restaurant/manager'
+  get '/restaurantmanager' ,to:'restaurant#manager'
 
-  get 'restaurant/customer'
+  get '/restaurantcustomer' ,to:'restaurant#customer'
 
   get '/menu' , to: 'restaurant#menu'
   
-  post '/menu' , to: 'manager#create'
+  get '/managerhome' , to: 'manager#home'
+
+  get '/managerview' , to: 'manager#view'
+  
+  get '/managerupdate' , to: 'manager#update'
+  
+  post '/managerupdate' , to: 'manager#create'
   
   root 'restaurant#home'
-
+  
   resources :inventories
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
