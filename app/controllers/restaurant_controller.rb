@@ -12,5 +12,6 @@ class RestaurantController < ApplicationController
   end
 
   def menu
+     @inventory = Inventory.new
   end
 end
