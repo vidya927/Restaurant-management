@@ -55,6 +55,13 @@ Rails.application.routes.draw do
   
   delete '/chefprepare', to: 'chef#prepare'
   
+<<<<<<< HEAD
+=======
+  get '/managersearch' , to: 'manager#search'
+  
+  
+  post '/managerupdate' , to: 'manager#create'
+>>>>>>> 8d75b08... manager search added
   
   root 'restaurant#home'
 
