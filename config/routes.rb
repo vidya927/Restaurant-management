@@ -38,6 +38,9 @@ Rails.application.routes.draw do
   get '/managerupdate' , to: 'manager#update'
   get '/managerupdate' , to: 'manager#view'
   
+  get '/managersearch' , to: 'manager#search'
+  
+  
   post '/managerupdate' , to: 'manager#create'
   
   root 'restaurant#home'
