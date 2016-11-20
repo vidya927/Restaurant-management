@@ -1,5 +1,7 @@
-<div class="center jumbotron"
-    <h1>Manager#view</h1>
+<div class="center jumbotron">
+    <h1>Manager view</h1>
+   <%= link_to "go to restaurant home", restauranthome_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "home", managerhome_path, class: "btn btn-lg btn-primary" %>
 <% if @inventory.blank? %>
 <p>There are not any items currently in the inventory.</p>
 <% else %>
