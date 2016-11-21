@@ -48,6 +48,15 @@ Rails.application.routes.draw do
   
   get '/managerhome' , to: 'manager#home'
 
+  get '/inventoryview' ,to:'inventory#view'
+  
+  get '/inventoryhome' ,to:'inventory#home'
+  
+  get '/inventoryindex' ,to:'inventory#index'
+  
+  get '/inventoryedit' , to: 'inventory#edit'
+
+
   get '/managerview' , to: 'manager#view'
   
   get '/managerupdate' , to: 'manager#update'

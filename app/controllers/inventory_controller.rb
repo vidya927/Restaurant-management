@@ -1,12 +1,6 @@
 class InventoryController < ApplicationController
   before_action :set_inventory, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @inventory = Inventory.all
-  end
-
-  def show
-  end
 
   def new
     @inventory = Inventory.new
@@ -49,13 +43,24 @@ class InventoryController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  private
-
+  
     def set_inventory
       @inventory = Inventory.find(params[:id])
     end
-
+  
+    def index
+      @inventory = Inventory.all
+      if params[:index]
+      @inventory = Inventory.index(params[:index]).order("item_name asc")
+      else
+      @inventory = Inventory.all.order("item_name asc")
+      end
+    end
+    
+   
+    
+    
+    
     def inventory_params
       params.require(:inventory).permit(:item_name, :quantity_available)
     end
