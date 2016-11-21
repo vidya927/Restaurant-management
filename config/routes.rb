@@ -1,4 +1,7 @@
-Rails.application.routes.draw do
+rails.application.routes.draw do
+ resources :inventory
+  root 'inventory#index'
+ 
   get '/customerhome', to: 'customer#home'
 
   get '/customerorder', to: 'customer#order'
@@ -8,7 +11,6 @@ Rails.application.routes.draw do
   get '/chefhome' ,to: 'chef#home'
 
   get '/chefview' , to: 'chef#view'
-  
 
  get '/chefedit' , to: 'chef#edit'
 
@@ -31,6 +33,7 @@ Rails.application.routes.draw do
 
   get '/menu' , to: 'restaurant#menu'
   
+<<<<<<< HEAD
   get '/managerhome' , to: 'manager#home'
 
   get '/managerview' , to: 'manager#view'
@@ -58,6 +61,9 @@ Rails.application.routes.draw do
 end
   
   resources :inventories
+=======
+ 
+>>>>>>> origin/branch2
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

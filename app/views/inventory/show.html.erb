@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item Name:</strong>
+  <%= @inventory.item_name %>
+</p>
+
+<p>
+  <strong>Quantity Available:</strong>
+  <%= @inventory.quantity_available %>
+</p>
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventory_index_path %>

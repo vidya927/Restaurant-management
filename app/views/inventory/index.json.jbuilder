@@ -1,0 +1,1 @@
+json.array! @inventory, partial: 'inventory', as: :inventory
