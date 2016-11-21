@@ -1,9 +1,6 @@
 class InventoryController < ApplicationController
   before_action :set_inventory, only: [:show, :edit, :update, :destroy]
 
-
-
-
   def new
     @inventory = Inventory.new
   end

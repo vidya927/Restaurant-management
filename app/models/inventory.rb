@@ -1,5 +1,5 @@
 class Inventory < ApplicationRecord
-    def self.search(search)
-        where("item_name LIKE ?", "%#{search}%") 
+    def self.index(index)
+        where("item_name LIKE ?", "%#{index}%") 
     end
 end
