@@ -60,9 +60,6 @@ Rails.application.routes.draw do
   root 'restaurant#home'
   
  
-  
- resources :inventory
- 
  resources :order, :collection => { :edit_multiple => :get, :update_multiple => :put }
   
  resources :chef, :collection => {:edit_multiple => :get, :update_multiple => :put }

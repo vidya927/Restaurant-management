@@ -5,6 +5,24 @@
 <p1>list of items<p1>
     
     <%= link_to "home", restauranthome_path, class: "btn btn-lg btn-primary" %>
-    <%= link_to "home", managerhome_path, class: "btn btn-lg btn-primary" %>
+      <table>
+  <thead>
+    <tr>
+      <th>Item Name</th>
+      <th>Quantity Available</th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <% @price.each do |p| %>
+      <tr>
+        <td><%= p.dish_name %></td>
+        <td><%= p.price %></td>
+        <td><%= p.description %></td>
+        <td><%= p.preparation_time %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+      
 </div>
