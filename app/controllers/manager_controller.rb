@@ -4,12 +4,12 @@ class ManagerController < ApplicationController
   end
   def search
   @inventory = Inventory.all
-  if params[:search]
+   if params[:search]
     @inventory = Inventory.search(params[:search]).order("created_at DESC")
-  else
+   else
     @inventory = Inventory.all.order("created_at DESC")
+   end
   end
-end
   def view
    @inventory = Inventory.all
   end

@@ -8,7 +8,7 @@
 <p>There are not any items currently in the inventory.</p>
 <% else %>
 <p>These are the current items in our inventory</p>
-<%= form_tag edit_multiple_path, method: :get do %>
+<%= form_tag(:action => "update_multiple", method: :post) do %>
 <table style="width:100%">
   <tr>
      <th>Select</th> 
@@ -27,22 +27,16 @@
    <td><%= c.customer_name %></td>
    <td><%= c.ordered_dish %></td>
    <td><%= c.quantity %></td>
-  <td> <%= link_to "Accept", edit_chef_path(c), class: "btn btn-lg btn-primary" %></td>
+  
    
     </tr>
       </tbody>
-    
+
     <% end %>
- 
 
 </table>
-<%= submit_tag "Edit Checked" %>
+<%= submit_tag "Mark as Complete" %>
 <% end %>
-<%= for each Order.find(params[:order_ids] do |i|) %>
-<li>
-   <%= i.customer_name %>
-</li>
-
 <% end %>
 </div> 
 

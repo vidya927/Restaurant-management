@@ -54,6 +54,9 @@ Recipe.create(recipe: 'gulab jamun', ingredients: 'ghee',required_qty_in_gm:'4')
 Order.create(customer_name: 'jack', ordered_dish: 'fried rice', Quntatity_of_each_item:'1', no: '2')
 Order.create(customer_name: 'john', ordered_dish: 'gulab jamun', Quntatity_of_each_item:'2', no: '2')
 
+Chef.create(customer_name: 'jack', ordered_dish: 'fried rice', quantity:'1')
+Chef.create(customer_name: 'john', ordered_dish: 'gulab jamun', quantity:'2')
+
 
 
 
