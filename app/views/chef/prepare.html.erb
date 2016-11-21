@@ -1,7 +1,34 @@
-<div class="center jumbotron">
-<h1>Food zone</h1>
-<p>Lets prepare food</p>
-<%= link_to "home", chefhome_path, class: "btn btn-lg btn-primary" %>
-<%= link_to "edit", chefedit_path, class: "btn btn-lg btn-primary" %>
-<%= link_to "add", chefadd_path, class: "btn btn-lg btn-primary" %>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <%= link_to "home", chefhome_path, class: "navbar-brand" %>
+        <%= link_to "prepare food", chefprepare_path, class: "navbar-brand" %>
+        <%= link_to "view catalog", chefview_path, class: "navbar-brand" %>
+        <%= link_to "go to restaurant home", restauranthome_path, class: "navbar-brand" %>
+  </div>
+  </nav>
+<p class="lead"> Lets prepare food</p>
+
+<div class="table-responsive col-sm-8">
+    
+<table  style="width:100%" class="table table-hover table-striped">
+  <thead>
+  <tr>
+      <th>S no</th>
+     <th>Customer Name</th> 
+     <th>Ordered Dish</th>
+     <th>Quantity</th>
+  </tr>
+  </thead>
+  <tbody>
+   <% @orders.each do |t| %>
+   <tr>
+       <td> </td>
+   <td><%= t.customer_name %></td>
+   <td><%= t.ordered_dish %></td>
+   <td><%= t.Quntatity_of_each_item %></td>
+    </tr>
+   
+    </tbody>
+   <% end %>
+</table>
 </div>

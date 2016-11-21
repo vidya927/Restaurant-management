@@ -6,5 +6,7 @@ class CustomerController < ApplicationController
   end
 
   def view
+    @price=Price.all
+    
   end
 end
