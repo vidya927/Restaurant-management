@@ -1,7 +1,5 @@
-rails.application.routes.draw do
- resources :inventory
-  root 'inventory#index'
- 
+Rails.application.routes.draw do
+
   get '/customerhome', to: 'customer#home'
 
   get '/customerorder', to: 'customer#order'
@@ -30,40 +28,25 @@ rails.application.routes.draw do
   get '/restaurantmanager' ,to:'restaurant#manager'
 
   get '/restaurantcustomer' ,to:'restaurant#customer'
+  
+  get '/inventoryview' ,to:'inventory#view'
+  
+  get '/inventoryhome' ,to:'inventory#home'
+  
+  get '/inventoryindex' ,to:'inventory#index'
 
   get '/menu' , to: 'restaurant#menu'
   
-<<<<<<< HEAD
-  get '/managerhome' , to: 'manager#home'
-
-  get '/managerview' , to: 'manager#view'
-  
-  get '/managerupdate' , to: 'manager#update'
-  get '/managerupdate' , to: 'manager#view'
-  
-  get '/managersearch' , to: 'manager#search'
-  
-  
-  post '/managerupdate' , to: 'manager#create'
   
   root 'restaurant#home'
   
-  Rails.application.routes.draw do
-  root   'static_pages#home'
-  get    '/help',    to: 'static_pages#help'
-  get    '/about',   to: 'static_pages#about'
-  get    '/contact', to: 'static_pages#contact'
-  get    '/signup',  to: 'users#new'
-  get    '/login',   to: 'sessions#new'
-  post   '/login',   to: 'sessions#create'
-  delete '/logout',  to: 'sessions#destroy'
-  resources :users
-end
-  
   resources :inventories
-=======
- 
->>>>>>> origin/branch2
+  
+
+  
+  
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
