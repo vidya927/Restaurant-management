@@ -67,7 +67,6 @@ Rails.application.routes.draw do
   post '/managerupdate' , to: 'manager#create'
   
   root 'restaurant#home'
-  
  
  resources :order, :collection => { :edit_multiple => :get, :update_multiple => :put }
   
