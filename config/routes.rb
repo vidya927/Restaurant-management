@@ -1,20 +1,14 @@
-Rails.application.routes.draw do 
+Rails.application.routes.draw do
+
   get '/customerhome', to: 'customer#home'
 
   get '/customerorder', to: 'customer#order'
 
   get '/customerview', to: 'customer#view'
-  
-   post '/customercheckout', to: 'customer#selected'
-   get '/customercheckout', to: 'customer#checkout'
-   
-    post '/selected', to: 'customer#selected'
-   
 
   get '/chefhome' ,to: 'chef#home'
 
   get '/chefview' , to: 'chef#view'
-  
 
  get '/chefedit' , to: 'chef#edit'
 
@@ -24,28 +18,18 @@ Rails.application.routes.draw do
 
   post '/chefadd' , to: 'chef#create'
   
-  post '/chefupdate' , to: 'chef#update_multiple'
-  
-  get '/chefeditmultiple' , to: 'chef#edit_multiple'
-  
   
   get '/chefprepare' , to: 'chef#prepare'
 
-     get '/inventoryview' ,to:'inventory#view'
-  
-  get '/inventoryhome' ,to:'inventory#home'
-  
-  get '/inventoryindex' ,to:'inventory#index'
+   get '/restauranthome' , to: 'restaurant#home'
 
   get '/restaurantchef' ,to: 'restaurant#chef'
 
   get '/restaurantmanager' ,to:'restaurant#manager'
 
   get '/restaurantcustomer' ,to:'restaurant#customer'
-   get '/restauranthome' ,to:'restaurant#home'
-
-  get '/menu' , to: 'customer#view'
   
+
   get '/managerhome' , to: 'manager#home'
 
   get '/inventoryview' ,to:'inventory#view'
@@ -58,22 +42,29 @@ Rails.application.routes.draw do
 
 
   get '/managerview' , to: 'manager#view'
+
+  get '/inventoryview' ,to:'inventory#view'
+
+  get '/inventoryhome' ,to:'inventory#home'
   
-  get '/managerupdate' , to: 'manager#update'
-  get '/managerupdate' , to: 'manager#view'
+  get '/inventoryindex' ,to:'inventory#index'
+
+  get '/menu' , to: 'restaurant#menu'
   
-  get '/managersearch' , to: 'manager#search'
- 
-  post '/managerupdate' , to: 'manager#create'
   
   root 'restaurant#home'
+
  
  resources :order, :collection => { :edit_multiple => :get, :update_multiple => :put }
+
   
- resources :chef, :collection => {:edit_multiple => :get, :update_multiple => :put }
- 
- resources :customer, :collection => { :checkout => :get, :selected => :put}
+  resources :inventories
   
+
+  
+  
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
