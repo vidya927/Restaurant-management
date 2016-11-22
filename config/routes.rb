@@ -42,8 +42,9 @@ Rails.application.routes.draw do
   get '/restaurantmanager' ,to:'restaurant#manager'
 
   get '/restaurantcustomer' ,to:'restaurant#customer'
+   get '/restauranthome' ,to:'restaurant#home'
 
-  get '/menu' , to: 'restaurant#menu'
+  get '/menu' , to: 'customer#view'
   
   get '/managerhome' , to: 'manager#home'
 
@@ -56,7 +57,7 @@ Rails.application.routes.draw do
  
   post '/managerupdate' , to: 'manager#create'
   
-  root 'inventory#home'
+  root 'restaurant#home'
   
  
   

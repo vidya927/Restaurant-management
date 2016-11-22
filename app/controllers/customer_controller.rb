@@ -1,5 +1,6 @@
 class CustomerController < ApplicationController
   def home
+      @price=Price.all
   end
 
   def order
@@ -13,6 +14,8 @@ class CustomerController < ApplicationController
   
   def selected
     @checkouts = Price.find(params[:customer_ids])
+    @name = params[:name]
+    @qty = params[:qty]
     # flash[:notice] = "#{@checkouts} added to cart"
      # redirect_back(fallback_location: "index")
      
@@ -23,12 +26,15 @@ class CustomerController < ApplicationController
   
   def checkout
       @checkouts = Price.find(params[:customer_ids])
+      @name = params[:name]
+      @qty = params[:qty]
       if @checkouts.nil?
+          
           flash[:notice] = "not found"
       end
      @total = 0
      for c in @checkouts
-       y = c.price
+       y = c.price 
        @total = @total + y
      end
       
