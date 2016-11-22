@@ -1,11 +1,18 @@
+
 <div class="container">
     <h1>Menu</h1>
+
+ 
 <% if @price.blank? %>
 <p>no menu</p>
 <% else %>
 
-<div class="table-responsive">
-    
+<div class="table-responsive ">
+<%= form_tag(customercheckout_path, method: :get) do %>     
+
+  <p>please enter your name : </p>
+  <%= label_tag :name %>
+  <%=  text_field_tag :name, params[:name] %>
 <table  style="width:100%" class="table table-hover">
   <thead>
   <tr>
@@ -13,28 +20,29 @@
     <th>Menu Item</th>
     <th>Price</th>
     <th>Description</th>
+    <th>quantity required </th>
   </tr>
   </thead>
-  
+  <% @price.each do |t| %>  
   <tbody>
-   <% @price.each do |t| %>
+ 
    <tr>
-    <td>   <div class="form-check">
-              <%= check_box_tag "product_ids[]",, product.id , class="form-check-input"%></td>
+    <td>   <div class="form-check"><%= check_box_tag "customer_ids[]", t.id %></td>
               </div>
    <td><%= t.dish_name %></td>
    <td><%= t.price %></td>
    <td><%= t.description %></td>
-   <td><% %></td>
+   <td><%= text_field_tag :qty, params[:qty] %></td>
    
     </tr>
    
     </tbody>
    <% end %>
 </table>
-</div>
 
-
+<%= submit_tag "checkout" %>
 <% end %>
 
+<% end %>
+</div>
 </div>
