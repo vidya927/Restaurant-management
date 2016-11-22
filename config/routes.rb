@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   get '/customerorder', to: 'customer#order'
 
   get '/customerview', to: 'customer#view'
+  
+   post '/customercheckout', to: 'customer#selected'
+   get '/customercheckout', to: 'customer#checkout'
+   
+    post '/selected', to: 'customer#selected'
+   
 
   get '/chefhome' ,to: 'chef#home'
 
@@ -56,6 +62,7 @@ Rails.application.routes.draw do
   
  resources :chef, :collection => {:edit_multiple => :get, :update_multiple => :put }
  
+ resources :customer, :collection => { :checkout => :get, :selected => :put}
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

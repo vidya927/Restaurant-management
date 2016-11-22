@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p>
 <div class="container">
     <h1>Menu</h1>
 <% if @price.blank? %>
@@ -5,7 +6,7 @@
 <% else %>
 
 <div class="table-responsive">
- <%= form_tag(:action => "checkout", method: :post) do %>   
+<%= form_tag(customercheckout_path, method: :get) do %>   
 <table  style="width:100%" class="table table-hover">
   <thead>
   <tr>
@@ -20,12 +21,12 @@
    <% @price.each do |t| %>
    <tbody>
    <tr>
-    <td> <%= check_box_tag "product_ids[]",t.id %></td>
+    <td> <%= check_box_tag "customer_ids[]",t.id %></td>
              
    <td><%= t.dish_name %></td>
    <td><%= t.price %></td>
    <td><%= t.description %></td>
-   <td><% %></td>
+ 
    
     </tr>
    

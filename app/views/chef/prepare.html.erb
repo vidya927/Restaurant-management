@@ -36,12 +36,9 @@
  
 
 </table>
-<%= submit_tag "Edit Checked" %>
+<%= submit_tag "Edit Checked"  %>
 <% end %>
-<%= for each Order.find(params[:order_ids] do |i|) %>
-<li>
-   <%= i.customer_name %>
-</li>
+
 
 <% end %>
 </div> 

@@ -1,4 +1,4 @@
-<script type="text/javascript">
+/*<script type="text/javascript">
 function add() {
 var element = document.createElement("input")
 element.setAttribute("type", Textbox);
@@ -10,4 +10,4 @@ element.setAttribute("type", Textbox);
 	foo.appendChild(element);
 
 }
-</script> 
+</script> */

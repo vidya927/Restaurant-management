@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161121094255) do
+ActiveRecord::Schema.define(version: 20161121125956) do
 
   create_table "catalogs", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(version: 20161121094255) do
     t.float    "quantity"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string   "dish_name"
+    t.float    "price"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "inventories", force: :cascade do |t|

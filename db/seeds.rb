@@ -57,6 +57,13 @@ Order.create(customer_name: 'john', ordered_dish: 'gulab jamun', Quntatity_of_ea
 Chef.create(customer_name: 'jack', ordered_dish: 'fried rice', quantity:'1')
 Chef.create(customer_name: 'john', ordered_dish: 'gulab jamun', quantity:'2')
 
+Price.create(dish_name: 'fried rice', price: '25', description:'spicy fried rice', preparation_time: '20m')
+Price.create(dish_name: 'Noodles', price: '30', description:'spicy Noodles', preparation_time: '25m')
+Price.create(dish_name: 'Pasta', price: '15', description:'Special Pasta', preparation_time: '15m')
+
+Customer.create(dish_name: 'fried rice', price: '25', description:'spicy fried rice')
+Customer.create(dish_name: 'Noodles', price: '30', description:'spicy Noodles')
+Customer.create(dish_name: 'Pasta', price: '15', description:'Special Pasta')
 
 
 

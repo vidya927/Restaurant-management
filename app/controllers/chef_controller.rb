@@ -36,9 +36,9 @@ def edit_multiple
 end
   
 def update_multiple
-  @orders = Order.find(params[:order_ids])
+  @orders = Chef.find(params[:order_ids])
    # Temp.insert()
-    #flash[:notice] = "#{orders.} added to cart"
+    flash[:notice] = "#{@orders} added to cart"
     redirect_back(fallback_location: "index")
     
 
