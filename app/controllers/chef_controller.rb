@@ -20,9 +20,11 @@ class ChefController < ApplicationController
   end
 
   def view
+     @prices= Price.all
   end
 
   def prepare
+    @orders=Order.all
   end
   
   def edit

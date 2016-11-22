@@ -1,0 +1,35 @@
+<p> you,ordered the following items.</p>
+
+  <p> Hi <%= @name %> !! Order summary :</p>
+  <p> quantity = <%= @qty %> </p>  
+  
+  <div class="table-responsive ">
+  <table class="table table-hover table-striped">
+   <tr>
+       
+       <th>menu item</th>
+       <th>price</th>
+        <th>quantity</th>
+       
+   </tr>
+    <%  for c in @checkouts  %>
+   <tbody>
+      
+       <tr>
+    
+       <td><%= c.dish_name%> </td>
+       <td><%= c.price%> </td>
+       <td><%= @qty %></td>
+       
+       </tr>
+   </tbody>
+    <% end %>
+   
+  <table>
+  
+  </div>
+   <p> Total Amount = <%= @total %> </p>  
+   
+    <%= link_to "proceed", customerview_path, class: "btn btn-lg btn-primary" %>  
+
+ 

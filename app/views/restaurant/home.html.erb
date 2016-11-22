@@ -1,14 +1,18 @@
-<div class="center jumbotron">
-  <h1>Welcome to Restaurant</h1>
 
-  <h2>
-   this is online restaurant management
-  </h2>
+ 
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+  <%= link_to "menu", menu_path, class: "navbar-brand"%>
+  <%= link_to "chef", chefhome_path, class: "navbar-brand" %>
 
-  <%= link_to "menu", menu_path, class: "btn btn-lg btn-primary" %>
-  <%= link_to "chef", chefhome_path, class: "btn btn-lg btn-primary" %>
-  <%= link_to "customer", customerhome_path, class: "btn btn-lg btn-primary" %>
-  <%= link_to "manager", managerhome_path, class: "btn btn-lg btn-primary" %>
-  <%= link_to "home", restauranthome_path, class: "btn btn-lg btn-primary" %>
-</div>
-
+  <%= link_to "manager", inventoryhome_path, class: "navbar-brand" %>
+  <%= link_to "home", restauranthome_path, class: "navbar-brand" %>
+  </div>
+  </nav>
+  
+  <div  class="col-sm-4">
+    <a class="lead"> Making eating a pleasure not a chore! </a>
+    </div>
+    <div  class="col-sm-8">
+      <img src="http://damndelicious.net/wp-content/uploads/2015/12/IMG_0304edit.jpg" class="img-fluid" alt="Responsive image" width="600" height="600">
+    </div>
