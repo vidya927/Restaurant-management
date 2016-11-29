@@ -51,6 +51,10 @@ Rails.application.routes.draw do
 
   get '/menu' , to: 'restaurant#menu'
   
+  get 'chef/delete'
+  
+  delete '/chefprepare', to: 'chef#prepare'
+  
   
   root 'restaurant#home'
 

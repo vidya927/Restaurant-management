@@ -26,6 +26,8 @@
    <td><%= t.customer_name %></td>
    <td><%= t.ordered_dish %></td>
    <td><%= t.Quntatity_of_each_item %></td>
+   <td> <b> <%= link_to "Proceed And CheckOut", {:action => 'delete', :id => t.id},
+      :confirm => "Are you sure you want to delete this item?" %></b> </td>
     </tr>
    
     </tbody>

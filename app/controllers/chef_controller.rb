@@ -16,6 +16,14 @@ class ChefController < ApplicationController
     end
   end
   
+  def prepare
+    @orders=Order.all
+  end
+  
+  def delete
+   Order.find(params[:id]).destroy
+   redirect_to :action => 'prepare'
+  end
   def home
   end
 
@@ -23,9 +31,7 @@ class ChefController < ApplicationController
      @prices= Price.all
   end
 
-  def prepare
-    @orders=Order.all
-  end
+ 
   
   def edit
     @recipes = Recipe.find(params[:id])
