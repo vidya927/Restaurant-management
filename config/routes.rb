@@ -61,8 +61,13 @@ Rails.application.routes.draw do
 
   get '/managerview' , to: 'manager#view'
   
+
   get '/managerupdate' , to: 'manager#update'
   get '/managerupdate' , to: 'manager#view'
+
+  get 'chef/delete'
+  
+
   
   get '/managersearch' , to: 'manager#search'
  
