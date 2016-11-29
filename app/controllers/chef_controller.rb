@@ -1,5 +1,9 @@
 class ChefController < ApplicationController
   
+  def index
+    @order = Chef.all
+  end
+  
   def add
     @recipes = Recipe.new
   end
@@ -22,6 +26,11 @@ class ChefController < ApplicationController
   def view
      @prices= Price.all
   end
+  
+  def accept
+    
+  end
+
 
   def prepare
     @orders=Order.all
@@ -35,4 +44,5 @@ class ChefController < ApplicationController
    def Recipe_params
      params.require(:recipes).permit(:recipes, :ingredients, :required_qty_in_gm)
    end
+   
 end

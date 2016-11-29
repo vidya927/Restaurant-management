@@ -1,3 +1,11 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <%= link_to "Home", inventoryhome_path, class: "navbar-brand" %>
+        <%= link_to "Manage Inventory", inventoryindex_path, class: "navbar-brand" %>
+        <%= link_to "Go to Restaurant Home", restauranthome_path, class: "navbar-brand" %>
+  </div>
+  </nav>
+  
 <h1>Editing Ingredient</h1>
 
 <%= render 'form' %>

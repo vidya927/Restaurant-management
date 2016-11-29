@@ -1,17 +1,14 @@
-<div class="jumbotron">
-<h1>welcome manager</h1>
-<p>Please see if anything is running empty :(</p>
-<div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <%= link_to "Home", inventoryhome_path, class: "navbar-brand" %>
+        <%= link_to "Manage Inventory", inventoryindex_path, class: "navbar-brand" %>
+        <%= link_to "Go to Restaurant Home", restauranthome_path, class: "navbar-brand" %>
+  </div>
+  </nav>
+  
+   <div  class="col-sm-4">
+    <a class="lead"> </a>
     </div>
-<nav>
-<ul class="nav navbar-nav navbar-right">
-<li><%= link_to "view", inventoryindex_path, class: "btn btn-lg btn-primary" %></li>
-<li><%= link_to "home", inventoryhome_path, class: "btn btn-lg btn-primary" %></li>
-
-<li><%= link_to "go to restaurant home", inventoryhome_path, class: "btn btn-lg btn-primary" %></li>
-          </ul>
-          </div>
-        </nav>
-</div>
+    <div  class="col-sm-8">
+      <img src="http://hotelrestaurantrecruiter.com/wp-content/uploads/2013/01/RestaurantManager7.jpg" class="img-fluid" alt="Responsive image" width="850" height="600">
+    </div>

@@ -4,6 +4,9 @@ class RestaurantController < ApplicationController
 
   def chef
   end
+  
+  def about
+  end
 
   def manager
   end

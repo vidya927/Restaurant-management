@@ -1,0 +1,29 @@
+
+    
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+  <%= link_to "Menu", menu_path, class: "navbar-brand"%>
+  <%= link_to "Home", restauranthome_path, class: "navbar-brand" %>
+  <%= link_to "Login",restauranthome_path, class: "navbar-brand" %>
+ 
+  </div>
+  </nav>
+    
+    <div  class="col-sm-4">
+    <a class="lead"> Signup!</a>
+    </div>
+    
+
+    <%= form_for :user, url: '/users' do |f| %>
+
+  Name:     <%= f.text_field :name %> <br>
+  <br>
+  Email:    <%= f.text_field :email %> <br>
+  <br>
+  Password: <%= f.password_field :password %> <br>
+  <br>
+  Password Confirmation: <%= f.password_field :password_confirmation %> <br>
+  <br>
+  <%= f.submit "Submit" %>
+
+<% end %>

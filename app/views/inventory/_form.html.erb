@@ -10,16 +10,19 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :item_name %><br>
+<div class="form-group">
+  <div class="control-label">
+    <%= f.label :item_name %> <br>
     <%= f.text_field :item_name %>
   </div>
-  <div class="field">
+  <div class="control-label">
     <%= f.label :quantity_available %><br>
     <%= f.text_field :quantity_available %>
   </div>
-  <div class="actions">
+  </br>
+  </div>
+  <div class=" btn">
     <%= f.submit %>
+  </div>
   </div>
 <% end %>

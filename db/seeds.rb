@@ -51,15 +51,15 @@ Recipe.create(recipe: 'gulab jamun', ingredients: 'gulab jamun',required_qty_in_
 Recipe.create(recipe: 'gulab jamun', ingredients: 'sugar',required_qty_in_gm:'2')
 Recipe.create(recipe: 'gulab jamun', ingredients: 'ghee',required_qty_in_gm:'4')
 
-Order.create(customer_name: 'jack', ordered_dish: 'fried rice', Quntatity_of_each_item:'1', no: '2')
-Order.create(customer_name: 'john', ordered_dish: 'gulab jamun', Quntatity_of_each_item:'2', no: '2')
+Order.create(customer_name: 'jack', ordered_dish: 'Fried rice', Quntatity_of_each_item:'1', no: '2')
+Order.create(customer_name: 'john', ordered_dish: 'Salt And Pepper Calamari', Quntatity_of_each_item:'2', no: '2')
 
-Price.create(dish_name: 'fried rice', price: '25', description:'spicy fried rice', preparation_time: '20m')
-Price.create(dish_name: 'Noodles', price: '30', description:'spicy Noodles', preparation_time: '25m')
-Price.create(dish_name: 'Pasta', price: '15', description:'Special Pasta', preparation_time: '15m') 
-
-
-
+Price.create(dish_name: 'Fried rice', price: '25', description:'wok-fried rice with lump crab meat, shiitake mushrooms, asparagus, egg, smoky bacon, zesty lemon and sriracha', preparation_time: '20m')
+Price.create(dish_name: 'Noodles', price: '30', description:'scallions, garlic and chili peppers stir-fried with ground chicken and served over hot egg noodles P.f. Changs Fried Rice ', preparation_time: '25m')
+Price.create(dish_name: 'Dumplings ', price: '6.50', description:'made fresh by hand in our kitchen, served steamed or pan-fried', preparation_time: '15m') 
+Price.create(dish_name: 'Salt And Pepper Calamari ', price: '7.95', description:'tender strips of calamari lightly dusted and tossed with a salt and pepper mix and green onions, served with a dipping sauce', preparation_time: '15m') 
+Price.create(dish_name: 'Egg Rolls ', price: '4.95', description:'hand-rolled with marinated pork and vegetables, and served with a sweet and sour mustard sauce', preparation_time: '15m') 
+Price.create(dish_name: 'Changs Spare Ribs ', price: '9.95', description:'wok-seared with an asian barbecue sauce', preparation_time: '15m') 
 
 
 
