@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Inventory</h1>
+<div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+<nav>
+<ul class="nav navbar-nav navbar-right">
+<li><%= link_to "home", inventoryhome_path, class: "btn btn-lg btn-primary" %></li>
+<li><%= link_to "go to restaurant home", restauranthome_path, class: "btn btn-lg btn-primary" %></li>
+          </ul>
+          </div>
+        </nav>
+</div>
+    <%= form_tag(inventoryindex_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :index, params[:index], placeholder: "Search for Ingredient to update" %>
+        <%= submit_tag "Search", :name => nil %>
+    <% end %>
+    <% if @inventory.blank? %>
+      <h4>There are no ingredients containing the term <%= params[:index] %>.</h4>
+    <% else %>
+      <p>These are the current search items in our inventory</p>
+      <table>
+      <thead>
+        <tr>
+        <th>Item Name</th>
+        <th>Quantity Available</th>
+        </tr>
+      </thead>
+
+      <tbody>
+      <% @inventory.each do |inventory| %>
+        <tr>
+        <td><%= inventory.item_name %></td>
+        <td><%= inventory.quantity_available %></td>
+        <td><%= link_to 'Show', inventory %></td>
+        <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
+        <td><%= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </tbody>
+      </table>
+    <% end %>
+
+<br>
+
+<%= link_to 'Add New Ingredient', new_inventory_path %>

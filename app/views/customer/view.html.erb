@@ -1,22 +1,30 @@
-
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <%= link_to "Menu", menu_path, class: "navbar-brand"%>
+  <%= link_to "Login", login_path, class: "navbar-brand" %>
+  </div>
+</nav>
+  
 <div class="container">
-    <h1>Menu</h1>
+    <div >
+    <a class="lead"> Menu </a>
 
- 
+    
 <% if @price.blank? %>
 <p>no menu</p>
 <% else %>
 
 <div class="table-responsive ">
 <%= form_tag(customercheckout_path, method: :get) do %>     
-
   <p>please enter your name : </p>
   <%= label_tag :name %>
   <%=  text_field_tag :name, params[:name] %>
-<table  style="width:100%" class="table table-hover">
+  <div class="table-responsive">
+<table class="table table-hover table-striped">
+  
   <thead>
   <tr>
-     <th>S.no</th> 
+    <th>S.no</th> 
     <th>Menu Item</th>
     <th>Price</th>
     <th>Description</th>
@@ -32,7 +40,7 @@
    <td><%= t.dish_name %></td>
    <td><%= t.price %></td>
    <td><%= t.description %></td>
-   <td><%= text_field_tag :qty, params[:qty] %></td>
+   <td><%= text_field_tag "qtys[]", params[:qty] %></td>
  
     </tr>
    
@@ -40,9 +48,12 @@
    <% end %>
 </table>
 
-<%= submit_tag "checkout" %>
+<div class="btn-group">
+<%= submit_tag "checkout", :class => "btn btn-primary" %>
+</div>
 <% end %>
 
 <% end %>
+</div>
 </div>
 </div>

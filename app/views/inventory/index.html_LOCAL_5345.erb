@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <%= link_to "Home", inventoryhome_path, class: "navbar-brand" %>
+        <%= link_to "Manage Inventory", inventoryindex_path, class: "navbar-brand" %>
+        <%= link_to "Go to Restaurant Home", restauranthome_path, class: "navbar-brand" %>
+  </div>
+</nav>
+
+<p class="lead"> Lets prepare food</p>
+
+<div class="table-responsive col-sm-8">
+    
+<table  style="width:100%" class="table table-hover">
+  <thead class="table table-striped">
+    <tr>
+      <th>Item Name</th>
+      <th>Quantity Available</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inventory.each do |inventory| %>
+      <tr>
+        <td><%= inventory.item_name %></td>
+        <td><%= inventory.quantity_available %></td>
+        <td><%= link_to 'Show', inventory %></td>
+        <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
+        <td><%= link_to 'Remove', inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add New Ingredient', new_inventory_path %>
